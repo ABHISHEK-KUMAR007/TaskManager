@@ -1,0 +1,165 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 90%;
+  max-width: 600px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 90vh; /* Allow container to take up most of the screen height */
+  overflow: hidden;
+}
+
+/* Header */
+h1 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Wallet Button */
+button {
+  background: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+/* Input Fields */
+input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Scrollable Task List */
+.task-list {
+  flex-grow: 1;
+  max-height: 300px; /* Set a maximum height for scrolling */
+  overflow-y: auto;
+  padding-right: 10px; /* Prevent content cut-off due to scrollbar */
+}
+
+/* Customize Scrollbar */
+.task-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.task-list::-webkit-scrollbar-thumb {
+  background-color: #007bff;
+  border-radius: 5px;
+}
+
+.task-list::-webkit-scrollbar-track {
+  background: #f4f4f4;
+}
+
+/* Task Item */
+li {
+  background: #fff;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+li strong {
+  font-size: 16px;
+  color: #333;
+}
+
+/* Task Buttons */
+.task-buttons {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.task-buttons button {
+  padding: 5px 10px;
+  font-size: 14px;
+  border-radius: 3px;
+}
+
+/* Button Colors */
+.task-buttons button:first-child {
+  background: #28a745;
+}
+
+.task-buttons button:first-child:hover {
+  background: #218838;
+}
+
+.task-buttons button:nth-child(2) {
+  background: #ffc107;
+}
+
+.task-buttons button:nth-child(2):hover {
+  background: #e0a800;
+}
+
+.task-buttons button:last-child {
+  background: #dc3545;
+}
+
+.task-buttons button:last-child:hover {
+  background: #c82333;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .container {
+    width: 100%;
+    padding: 15px;
+    height: 95vh;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+  }
+
+  input {
+    width: calc(100% - 20px);
+  }
+
+  li {
+    text-align: left;
+  }
+
+  .task-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .task-buttons button {
+    width: 100%;
+  }
+}
